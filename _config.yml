@@ -60,7 +60,7 @@ rss:
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  #since: 2015
+  since: 2018
 
   # Icon between year and copyright info.
   icon:
@@ -73,19 +73,19 @@ footer:
     color: "#808080"
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright:
+  copyright: false
   # -------------------------------------------------------------
   powered:
     # Hexo link (Powered by Hexo).
-    enable: true
+    enable: false
     # Version info of Hexo after Hexo link (vX.X.X).
-    version: true
+    version: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Beian icp information for Chinese users. In China, every legal website should have a beian icp in website footer.
   # http://www.miitbeian.gov.cn
@@ -137,10 +137,13 @@ exturl: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
+  bandwagon: /categories/bandwagon/ || bold
+  Vultr: /categories/Vultr/ || vimeo-square
+  discount: /categories/discount || tags
   #about: /about/ || user
   #tags: /tags/ || tags
   #categories: /categories/ || th
-  archives: /archives/ || archive
+  #archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -199,11 +202,13 @@ social_icons:
 
 # Blog rolls
 links_icon: link
-links_title: Links
-links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com
+links_title: 推荐阅读
+# links_layout: block
+links_layout: inline
+links:
+  搬瓦工: https://www.abcvps.cn/categories/bandwagon/
+  Vultr: https://www.abcvps.cn/categories/Vultr/
+  优惠: https://www.abcvps.cn/categories/discount
 
 # Sidebar Avatar
 avatar:
@@ -256,7 +261,6 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
 
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
@@ -296,6 +300,11 @@ post_meta:
     # If false show anyway, but if post edited in same day, show only edited time.
     another_day: true
   categories: true
+
+# 文章末尾添加“本文结束”标记
+passage_end_tag:
+enabled: true
+
 
 # Post wordcount display settings
 # Dependencies: https://github.com/theme-next/hexo-symbols-count-time
@@ -501,7 +510,7 @@ pangu: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 90c75b4cf51029937531c125fe4e5acb
 
 # Growingio Analytics ID
 # Copyright 2015-2018 GrowingIO, Inc. More info available at http://www.growingio.com
@@ -525,12 +534,12 @@ changyan:
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 valine:
-  enable: false # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
-  appid:  # your leancloud application appid
-  appkey:  # your leancloud application appkey
+  enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
+  appid: zvqRrWYVwpWRE5vcsqGCIK2E-gzGzoHsz
+  appkey: lUs5Ad4MEqboA6YhNTNrK17C
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
-  placeholder: Just go go # comment box placeholder
+  placeholder: 问题留言 # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail,link # custom comment header
   pageSize: 10 # pagination size
